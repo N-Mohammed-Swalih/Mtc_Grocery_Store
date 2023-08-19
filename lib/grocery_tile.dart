@@ -34,10 +34,11 @@ class GroceryItemTile extends StatelessWidget {
             children: [
               // item image
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                padding: EdgeInsets.all(25),
                 child: Image.asset(
                   imagePath,
+                  width: 150,
+                  height: 120,
                 ),
               ),
 

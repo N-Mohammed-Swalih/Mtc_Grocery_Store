@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 class CartModel extends ChangeNotifier {
   final List _groceryItems = [
-    ["Rice", "39.0", "./assets/rice.png", Color.fromARGB(255, 100, 85, 0)],
-    ["Sugar", "45.0", "./assets/sugar.png", Color.fromARGB(255, 100, 85, 0)],
+    ["Rice", "39.0", "./assets/rice.png", Colors.black],
+    ["Sugar", "45.0", "./assets/sugar.png", Colors.black],
     [
       "Jaggery",
       "50.0",
       "./assets/jaggery.png",
-      Color.fromARGB(255, 100, 85, 0)
+      Colors.black
     ],
-    ["Chilly", "220.0", "./assets/chillies.png", Color.fromARGB(255, 100, 85, 0)],
+    ["Chilly", "220.0", "./assets/chillies.png", Colors.black],
   ];
 
 //list of card items
