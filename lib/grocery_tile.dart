@@ -25,51 +25,51 @@ class GroceryItemTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color(0xFFFFCF00),
+          color: Colors.green,
         ),
-        child: ListView (children :[
+        child: ListView(children: [
           Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // item image
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40.0),
-              child: Image.asset(
-                imagePath,
-                width: 50,
-                height: 50,
-              ),
-            ),
-
-            // item name
-            Text(
-              itemName,
-              style: const TextStyle(
-                fontSize: 16,
-              ),
-            ),
-
-             Material(
-             shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(22.0) ),   
-                     clipBehavior: Clip.antiAlias,  
-                      color: color,
-                      elevation: 5.0,  
-             child : MaterialButton(
-              onPressed: onPressed,      
-              child: Text(
-                itemPrice,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // item image
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+                child: Image.asset(
+                  imagePath,
                 ),
               ),
+
+              // item name
+              Text(
+                itemName,
+                style: const TextStyle(
+                  fontSize: 16,
+                ),
               ),
-            )
-          ],
-        ),
-     ] ),
-    ),
+
+              Material(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(22.0)),
+                clipBehavior: Clip.antiAlias,
+                color: color,
+                elevation: 5.0,
+                child: MaterialButton(
+                  onPressed: onPressed,
+                  child: Text(
+                    itemPrice,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ]),
+      ),
     );
   }
 }

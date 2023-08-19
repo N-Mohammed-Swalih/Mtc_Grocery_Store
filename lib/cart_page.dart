@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mtc_store/card_model.dart';
+import 'package:mtc_store/cart_model.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatelessWidget {
@@ -10,7 +10,7 @@ class CartPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFFFFCF00),
+          backgroundColor: Colors.green,
           iconTheme: (IconThemeData(color: Colors.white)),
           title: Text("My Cart"),
         ),
@@ -24,7 +24,7 @@ class CartPage extends StatelessWidget {
                         padding: EdgeInsets.all(12.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0xFFFFCF00),
+                            color: Colors.green,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: ListTile(
@@ -49,7 +49,7 @@ class CartPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFCF00),
+                  color: Colors.green,
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 padding: const EdgeInsets.all(24),

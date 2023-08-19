@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ? SlidingClippedNavBar.colorful(
               backgroundColor: Colors.yellow,
               onButtonPressed: onButtonPressed,
-              iconSize: 10,
+              iconSize: 25,
               selectedIndex: selectedIndex,
               barItems: <BarItem>[
                 BarItem(
@@ -89,9 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             )
           : SlidingClippedNavBar(
-              backgroundColor: Color(0xFFFFCF00),
+              backgroundColor: Colors.green,
               onButtonPressed: onButtonPressed,
-              iconSize: 30,
+              iconSize: 25,
               activeColor: Colors.white,
               inactiveColor: Colors.grey.shade300,
               selectedIndex: selectedIndex,

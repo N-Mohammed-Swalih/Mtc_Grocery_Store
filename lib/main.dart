@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mtc_store/card_model.dart';
+import 'package:mtc_store/cart_model.dart';
 import 'package:mtc_store/initial_page.dart';
 import 'package:provider/provider.dart';
 

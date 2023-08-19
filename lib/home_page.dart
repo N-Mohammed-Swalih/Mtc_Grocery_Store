@@ -1,4 +1,6 @@
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
+import 'package:mtc_store/cart_page.dart';
+import 'package:mtc_store/grocery_list.dart';
 import './notification_page.dart';
 import 'package:flutter/material.dart';
 import './profile_page.dart';
@@ -25,11 +27,11 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ProfilePage()));
             },
           ),
-          backgroundColor: const Color(0xFFFFCF00),
+          backgroundColor: Colors.green,
           centerTitle: true,
           title: const Text('MTC Grocery Market',
               style: TextStyle(
-                color: Color.fromARGB(255, 89, 79, 0),
+                color: Colors.white,
               )),
           actions: [
             IconButton(
@@ -42,20 +44,28 @@ class HomePage extends StatelessWidget {
                   );
                 })
           ]),
-      body: ListView(children: [
-        FanCarouselImageSlider(
-          sliderWidth: MediaQuery.sizeOf(context).width,
-          sliderHeight: 300,
-          imagesLink: sampleImages,
-          imageFitMode: BoxFit.fill,
-          isAssets: true,
-          expandImageHeight: 100,
-          expandImageWidth: 300,
-          autoPlay: true,
-          showIndicator: false,
-          isClickable: false,
-        ),
-      ]),
-    );
+      body: CustomScrollView(
+        slivers: [
+         SliverList(
+            delegate: SliverChildListDelegate(
+              [
+          FanCarouselImageSlider(
+            sliderWidth: MediaQuery.sizeOf(context).width,
+            sliderHeight: 300,
+            imagesLink: sampleImages,
+            imageFitMode: BoxFit.fill,
+            isAssets: true,
+            expandImageHeight: 100,
+            expandImageWidth: 300,
+            autoPlay: true,
+            showIndicator: false,
+            isClickable: false,
+          ),
+          Container(
+            child: GroceryList(),
+          )
+        ]),
+      ),
+    ]));
   }
 }
