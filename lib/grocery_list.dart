@@ -21,10 +21,10 @@ class GroceryList extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Text(
-          "Grocery Items",
+          "Our Items",
           style: GoogleFonts.notoSerif(
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 25,
           ),
         ),
       ),

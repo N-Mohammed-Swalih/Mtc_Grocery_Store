@@ -1,4 +1,5 @@
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mtc_store/cart_page.dart';
 import 'package:mtc_store/grocery_list.dart';
 import './notification_page.dart';
@@ -29,9 +30,11 @@ class HomePage extends StatelessWidget {
           ),
           backgroundColor: Colors.green,
           centerTitle: true,
-          title: const Text('MTC Grocery Market',
-              style: TextStyle(
+          title: Text('MTC Grocery Market',
+              style: GoogleFonts.roboto(
                 color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 23
               )),
           actions: [
             IconButton(
@@ -61,9 +64,8 @@ class HomePage extends StatelessWidget {
             showIndicator: false,
             isClickable: false,
           ),
-          Container(
-            child: GroceryList(),
-          )
+          GroceryList(),
+          
         ]),
       ),
     ]));

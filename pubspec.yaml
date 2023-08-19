@@ -30,7 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fan_carousel_image_slider: any
+  fan_carousel_image_slider:  
+  lottie: ^2.6.0
   sliding_clipped_nav_bar:
 
 

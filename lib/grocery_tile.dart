@@ -37,36 +37,42 @@ class GroceryItemTile extends StatelessWidget {
                 padding: EdgeInsets.all(25),
                 child: Image.asset(
                   imagePath,
-                  width: 150,
-                  height: 120,
+                  width: 200,
+                  height: 100,
                 ),
               ),
-
+              const SizedBox(
+                height: 10,
+              ),
               // item name
               Text(
                 itemName,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 20,
                 ),
               ),
-
-              Material(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(22.0)),
-                clipBehavior: Clip.antiAlias,
-                color: color,
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: onPressed,
-                  child: Text(
-                    itemPrice,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+              const SizedBox(
+                height: 20,
+              ),
+                  Material(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(22.0)),
+                    clipBehavior: Clip.antiAlias,
+                    color: color,
+                    elevation: 20.0,
+                    child: MaterialButton(
+                      onPressed: onPressed,
+                      child: Text(
+                        itemPrice,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              )
+                
             ],
           ),
         ]),
