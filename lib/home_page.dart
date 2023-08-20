@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             icon: const Icon(Icons.person_rounded),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ProfilePage()));
+                  MaterialPageRoute(builder: (context) => ProfilePage()));
             },
           ),
           backgroundColor: Colors.green,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'cart_model.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'grocery_tile.dart';
 import 'package:provider/provider.dart';
 
 class GroceryList extends StatelessWidget {
@@ -30,9 +29,8 @@ class GroceryList extends StatelessWidget {
       ),
 
       // recent orders -> show last 3
-      Expanded(
-        child: Consumer<CartModel>(builder: (context, value, child) {
-          return GridView.builder(
+      Expanded(child: Consumer<CartModel>(builder: (context, value, child) {
+        return GridView.builder(
             shrinkWrap: true,
             padding: const EdgeInsets.all(12),
             itemCount: value.groceryItems.length,
@@ -41,18 +39,9 @@ class GroceryList extends StatelessWidget {
               childAspectRatio: 1 / 1.2,
             ),
             itemBuilder: (context, index) {
-              return GroceryItemTile(
-                itemName: value.groceryItems[index][0],
-                itemPrice: value.groceryItems[index][1],
-                imagePath: value.groceryItems[index][2],
-                color: value.groceryItems[index][3],
-                onPressed: () => Provider.of<CartModel>(context, listen: false)
-                    .addItemToCart(index),
-              );
-            },
-          );
-        }),
-      )
+
+            });
+      }))
     ]);
   }
 }
