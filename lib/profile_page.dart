@@ -73,7 +73,6 @@ class ProfilePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           itemBuilder: (context, index) => Container(
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 231, 231, 231),
                 borderRadius: BorderRadius.circular(150)),
             child: ListTile(
               leading: Icon(icons[index]),
