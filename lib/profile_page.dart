@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mtc_store/colors.dart';
 
 class ProfilePage extends StatelessWidget {
   ProfilePage({super.key});
@@ -26,7 +27,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: color,
         title: Text("Profile Page"),
         centerTitle: true,
       ),
@@ -36,20 +37,17 @@ class ProfilePage extends StatelessWidget {
         ),
         Center(
           child: CircleAvatar(
-              backgroundImage: const NetworkImage(
+            backgroundImage: const NetworkImage(
                 "https://i.guim.co.uk/img/media/fd9b9ed4d416bd1867fe356e49975b9527c26765/0_59_2588_1553/master/2588.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=9524bc6ee58b97a7230c38228afaecec"),
             minRadius: 70,
             maxRadius: 100,
             child: IconButton(
               onPressed: () {},
-              icon: (
-                const Icon(
+              icon: (const Icon(
                 Icons.edit,
                 color: Colors.grey,
               )),
-              
             ),
-          
           ),
         ),
         const SizedBox(
@@ -72,8 +70,7 @@ class ProfilePage extends StatelessWidget {
           itemCount: buttonname.length,
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           itemBuilder: (context, index) => Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(150)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(150)),
             child: ListTile(
               leading: Icon(icons[index]),
               title: TextField(
