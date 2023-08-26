@@ -25,7 +25,7 @@ class GroceryItemTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.green,
+          color: color,
         ),
         child: ListView(children: [
           Column(

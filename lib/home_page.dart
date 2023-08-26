@@ -4,6 +4,7 @@ import 'package:mtc_store/grocery_list.dart';
 import './notification_page.dart';
 import 'package:flutter/material.dart';
 import './profile_page.dart';
+import 'colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ProfilePage()));
               },
             ),
-            backgroundColor: Colors.green,
+            backgroundColor: color,
             centerTitle: true,
             title: Text('MTC Grocery Market',
                 style: GoogleFonts.roboto(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mtc_store/colors.dart';
 import 'home_page.dart';
+import 'navigation_bar.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -125,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(100)),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: color,
                                 ),
                                 onPressed: () {
                                   final valid =
@@ -134,14 +136,14 @@ class _LoginPageState extends State<LoginPage> {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const HomePage()));
+                                                const BottomNavBar()));
                                   } else {
                                     Fluttertoast.showToast(
                                         msg: "Invalid Username or Password",
                                         toastLength: Toast.LENGTH_SHORT,
                                         gravity: ToastGravity.BOTTOM_LEFT,
                                         // timeInSecForIosWeb: 1,
-                                        backgroundColor: Colors.red,
+                                        backgroundColor: color,
                                         textColor: Colors.white,
                                         fontSize: 16.0);
                                   }

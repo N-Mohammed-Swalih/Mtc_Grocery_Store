@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mtc_store/cart_model.dart';
 import 'package:provider/provider.dart';
 
+import 'colors.dart';
+
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
@@ -10,7 +12,7 @@ class CartPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: color,
           iconTheme: (IconThemeData(color: Colors.white)),
           title: Text("My Cart"),
         ),
@@ -24,7 +26,7 @@ class CartPage extends StatelessWidget {
                         padding: EdgeInsets.all(12.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: color,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: ListTile(
@@ -49,7 +51,7 @@ class CartPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.green,
+                  color: color,
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 padding: const EdgeInsets.all(24),
@@ -61,12 +63,12 @@ class CartPage extends StatelessWidget {
                           children: [
                             const Text(
                               "Total Price",
-                              style: TextStyle(color: Colors.black),
+                              style: TextStyle(color: Colors.white),
                             ),
                             Text(
                               "Rs ${value.calculateCartPrice()}",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),

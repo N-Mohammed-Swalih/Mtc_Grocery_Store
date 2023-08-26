@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mtc_store/cart_page.dart';
+import 'package:mtc_store/colors.dart';
 import 'package:mtc_store/home_page.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
@@ -89,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             )
           : SlidingClippedNavBar(
-              backgroundColor: Colors.green,
+              backgroundColor: color,
               onButtonPressed: onButtonPressed,
               iconSize: 25,
               activeColor: Colors.white,
