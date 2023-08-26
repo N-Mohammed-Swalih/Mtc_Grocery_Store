@@ -18,7 +18,7 @@ class _SplashPageState extends State<SplashPage> {
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) =>
-              BottomNavBar())); //when timer completes it redirects to home
+              LoginPage())); //when timer completes it redirects to home
     });
     super.initState();
   }
