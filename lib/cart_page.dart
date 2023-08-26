@@ -26,7 +26,7 @@ class CartPage extends StatelessWidget {
                         padding: EdgeInsets.all(12.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: color,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: ListTile(

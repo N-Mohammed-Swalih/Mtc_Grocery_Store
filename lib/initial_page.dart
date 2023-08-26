@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mtc_store/login_page.dart';
+import 'package:mtc_store/navigation_bar.dart';
 
 
 class SplashPage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SplashPageState extends State<SplashPage> {
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) =>
-              LoginPage())); //when timer completes it redirects to home
+              BottomNavBar())); //when timer completes it redirects to home
     });
     super.initState();
   }

@@ -28,18 +28,16 @@ class GroceryList extends StatelessWidget {
           ),
         ),
       ),
-
-      // recent orders -> show last 3
+      //  show the items
       Expanded(
         child: Consumer<CartModel>(builder: (context, value, child) {
           return GridView.builder(
-            shrinkWrap: true,
-            padding: const EdgeInsets.all(12),
+            shrinkWrap: true, 
+            padding: const EdgeInsets.all(10),
             itemCount: value.groceryItems.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 1 / 1.2,
-            ),
+                crossAxisCount: 2, childAspectRatio: 1/1.3,
+                mainAxisSpacing: 10),
             itemBuilder: (context, index) {
               return GroceryItemTile(
                 itemName: value.groceryItems[index][0],
