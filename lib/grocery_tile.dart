@@ -31,7 +31,7 @@ class GroceryItemTile extends StatelessWidget {
           color: color,
         ),
         child: GestureDetector(
-          onTap: onPressed,
+          onDoubleTap: onPressed,
           child: Stack(children: [
             Positioned(
                 top: 5,
