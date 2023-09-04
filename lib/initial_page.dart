@@ -17,10 +17,10 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     //what will happen when the page / app is  first launched
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) =>
-              HomePage())); //when timer completes it redirects to home
+              BottomNavBar())); //when timer completes it redirects to home
     });
     super.initState();
   }
@@ -30,13 +30,13 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body : Container(
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
             opacity: 0.3,
             image: NetworkImage("https://images.unsplash.com/photo-1621956838481-f8f616950454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80")),
         ),
-        child : Center(
+        child :const Center(
           child: Column(
             children : [
               SizedBox(

@@ -10,19 +10,12 @@ class GroceryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(shrinkWrap: true, children: [
-      const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Divider(),
-      ),
-
-      const SizedBox(height: 24),
-
       // categories -> horizontal listview
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      const Padding(
+        padding: EdgeInsets.all(15),
         child: Text(
           "Our Items",
-          style: GoogleFonts.notoSerif(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
           ),
@@ -32,11 +25,12 @@ class GroceryList extends StatelessWidget {
       Expanded(
         child: Consumer<CartModel>(builder: (context, value, child) {
           return GridView.builder(
-            shrinkWrap: true, 
+            shrinkWrap: true,
             padding: const EdgeInsets.all(10),
             itemCount: value.groceryItems.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, childAspectRatio: 1/1.3,
+                crossAxisCount: 2,
+                childAspectRatio: 1 / 1.3,
                 mainAxisSpacing: 10),
             itemBuilder: (context, index) {
               return GroceryItemTile(

@@ -10,11 +10,11 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   var categoryimages = [
-    'assets/pulses.png',
-    'assets/fruits.png',
     'assets/vegetables.png',
-    'assets/beverages.png',
+    'assets/fruits.png',
     'assets/packagedfoods.png',
+    'assets/pulses.png',
+    'assets/beverages.png',
     'assets/stationaries.png'
   ];
 
@@ -85,48 +85,56 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(15.0),
                   child: Text(
                     'Shop By Category',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.45,
-                  child: GridView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 6,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisExtent: 200,
-                        mainAxisSpacing: 0,
-                        crossAxisSpacing: 10,
-                      ),
-                      itemBuilder: (context, index) => Card(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade300),
-                                borderRadius: BorderRadius.circular(10),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.45,
+                    child: GridView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 6,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisExtent: 200,
+                          mainAxisSpacing: 0,
+                          crossAxisSpacing: 0,
+                        ),
+                        itemBuilder: (context, index) => Card(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.grey.shade300),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Image.asset(
+                                      categoryimages[index],
+                                      fit: BoxFit.fill,
+                                      height: 100,
+                                      width: 120,
+                                    ),
+                                    Text(categoryname[index]),
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image.asset(
-                                    categoryimages[index],
-                                    fit: BoxFit.fill,
-                                    height: 100,
-                                    width: 120,
-                                  ),
-                                  Text(categoryname[index]),
-                                ],
-                              ),
-                            ),
-                          )),
+                            )),
+                  ),
                 ),
               ],
             ),
+          ),
+          SliverToBoxAdapter(
+            child: GroceryList(),
           )
         ]));
   }
