@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 import 'package:mtc_store/cart_page.dart';
 import 'package:mtc_store/colors.dart';
 import 'package:mtc_store/home_page.dart';
-import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
+
 
 
 void main() {
@@ -16,7 +17,6 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         canvasColor: Color.fromARGB(255, 232, 234, 222),
       ),
@@ -76,15 +76,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: 'Home',
                 ),
                 BarItem(
-                  icon: Icons.search_rounded,
-                  title: 'Search',
+                  icon: Icons.favorite_outline,
+                  title: 'Wishlist',
                 ),
                 BarItem(
-                  icon: Icons.playlist_play,
-                  title: 'Playlist',
+                  icon: Icons.shopping_cart,
+                  title: 'Cart',
                 ),
                 BarItem(
-                  icon: Icons.tune_rounded,
+                  icon: Icons.settings,
                   title: 'Settings',
                 ),
               ],

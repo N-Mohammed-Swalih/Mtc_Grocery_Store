@@ -7,7 +7,25 @@ import './profile_page.dart';
 import 'colors.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  var categoryimages = [
+    'assets/pulses.png',
+    'assets/fruits.png',
+    'assets/vegetables.png',
+    'assets/beverages.png',
+    'assets/packagedfoods.png',
+    'assets/stationaries.png'
+  ];
+
+  var categoryname = [
+    'VEGETABLES',
+    'FRUITS',
+    'PACKAGED FOODS',
+    'FOOD GRAINS',
+    'BEVERAGES',
+    'STATIONARIES'
+  ];
 
   static const List<String> sampleImages = [
     './assets/mega-offers.webp',
@@ -61,9 +79,55 @@ class HomePage extends StatelessWidget {
                 showIndicator: false,
                 isClickable: false,
               ),
-              const GroceryList(),
             ]),
           ),
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    'Shop By Category',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.45,
+                  child: GridView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 6,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisExtent: 200,
+                        mainAxisSpacing: 0,
+                        crossAxisSpacing: 10,
+                      ),
+                      itemBuilder: (context, index) => Card(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey.shade300),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Image.asset(
+                                    categoryimages[index],
+                                    fit: BoxFit.fill,
+                                    height: 100,
+                                    width: 120,
+                                  ),
+                                  Text(categoryname[index]),
+                                ],
+                              ),
+                            ),
+                          )),
+                ),
+              ],
+            ),
+          )
         ]));
   }
 }
