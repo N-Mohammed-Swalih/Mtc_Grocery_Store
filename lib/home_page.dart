@@ -67,8 +67,7 @@ class HomePage extends StatelessWidget {
                     );
                   })
             ]),
-        body: CustomScrollView(
-          slivers: [
+        body: CustomScrollView(slivers: [
           SliverList(
             delegate: SliverChildListDelegate([
               FanCarouselImageSlider(
@@ -119,7 +118,7 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height*.36,
+                    height: MediaQuery.of(context).size.height * .36,
                     child: GridView.builder(
                         itemCount: 4,
                         gridDelegate:
@@ -157,8 +156,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-              child: BestSelling(),
-              )
+            child: BestSelling(),
+          )
         ]));
   }
 }

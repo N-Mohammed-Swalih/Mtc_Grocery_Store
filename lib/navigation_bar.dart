@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mtc_store/settings_page.dart';
+import 'package:mtc_store/wishlist_page.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 import 'package:mtc_store/cart_page.dart';
 import 'package:mtc_store/colors.dart';
 import 'package:mtc_store/home_page.dart';
-
-
 
 void main() {
   runApp(const BottomNavBar());
@@ -120,8 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 List<Widget> _listOfWidget = <Widget>[
-    HomePage(),
-  Placeholder(),
+  HomePage(),
+  Wishlist(),
   CartPage(),
-  Placeholder(),
+  Settings(),
 ];

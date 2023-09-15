@@ -12,6 +12,7 @@ class CartPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: color,
           iconTheme: (IconThemeData(color: Colors.white)),
           title: Text("My Cart"),
