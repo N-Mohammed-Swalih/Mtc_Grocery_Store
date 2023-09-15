@@ -1,9 +1,12 @@
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mtc_store/grocery_list.dart';
 import './notification_page.dart';
 import 'package:flutter/material.dart';
 import './profile_page.dart';
+import 'best_selling_page.dart';
+import 'categories_page.dart';
 import 'colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -64,17 +67,19 @@ class HomePage extends StatelessWidget {
                     );
                   })
             ]),
-        body: CustomScrollView(slivers: [
+        body: CustomScrollView(
+          slivers: [
           SliverList(
             delegate: SliverChildListDelegate([
               FanCarouselImageSlider(
                 sliderWidth: MediaQuery.sizeOf(context).width,
-                sliderHeight: 300,
+                sliderHeight: 250,
                 imagesLink: sampleImages,
+                imageRadius: 10,
                 imageFitMode: BoxFit.fill,
                 isAssets: true,
                 expandImageHeight: 100,
-                expandImageWidth: 300,
+                expandImageWidth: 200,
                 autoPlay: true,
                 showIndicator: false,
                 isClickable: false,
@@ -83,26 +88,44 @@ class HomePage extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    'Shop By Category',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Shop By Category',
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CategoryList()));
+                        },
+                        child: Text(
+                          "See all",
+                          style: TextStyle(color: Colors.teal),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.45,
+                    height: MediaQuery.of(context).size.height*.36,
                     child: GridView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 6,
+                        itemCount: 4,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          mainAxisExtent: 200,
+                          mainAxisExtent: 150,
                           mainAxisSpacing: 0,
                           crossAxisSpacing: 0,
                         ),
@@ -134,8 +157,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: GroceryList(),
-          )
+              child: BestSelling(),
+              )
         ]));
   }
 }

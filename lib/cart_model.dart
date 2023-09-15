@@ -6,8 +6,6 @@ class CartModel extends ChangeNotifier {
     ["Sugar", "45.0", "./assets/sugar.png", Colors.white],
     ["Jaggery", "50.0", "./assets/jaggery.png", Colors.white],
     ["Chilly", "220.0", "./assets/chillies.png", Colors.white],
-    ["Toor Dal", "110.0", "./assets/toordal.png", Colors.white],
-    ["Lentils", "65.0", "./assets/lentils.png", Colors.white],
   ];
 
 //list of card items

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'cart_model.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'grocery_tile.dart';
 import 'package:provider/provider.dart';
 
@@ -14,7 +14,7 @@ class GroceryList extends StatelessWidget {
       const Padding(
         padding: EdgeInsets.all(15),
         child: Text(
-          "Our Items",
+          "Best Selling",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
@@ -30,7 +30,7 @@ class GroceryList extends StatelessWidget {
             itemCount: value.groceryItems.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 1 / 1.3,
+                childAspectRatio: 1 / 1,
                 mainAxisSpacing: 10),
             itemBuilder: (context, index) {
               return GroceryItemTile(
