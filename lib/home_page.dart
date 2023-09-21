@@ -118,13 +118,13 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height * .36,
+                    height: MediaQuery.of(context).size.height / 2.5,
                     child: GridView.builder(
                         itemCount: 4,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          mainAxisExtent: 150,
+                          mainAxisExtent:
+                              MediaQuery.of(context).size.height / 5,
                           mainAxisSpacing: 0,
                           crossAxisSpacing: 0,
                         ),
@@ -155,9 +155,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SliverToBoxAdapter(
-            child: BestSelling(),
-          )
+          SliverToBoxAdapter(child: BestSelling()),
         ]));
   }
 }

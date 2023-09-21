@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mtc_store/colors.dart';
-import 'home_page.dart';
 import 'navigation_bar.dart';
 
 class LoginPage extends StatefulWidget {

@@ -3,13 +3,11 @@ import 'package:mtc_store/colors.dart';
 
 import 'dummy_list.dart';
 
-void main() {
+void main(){
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
     home: ProductPage(),
   ));
 }
-
 class ProductPage extends StatefulWidget {
   ProductPage({super.key});
 
@@ -20,16 +18,16 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
-    final itemid = ModalRoute.of(context)?.settings.arguments;
+    final iterateditemId = ModalRoute.of(context)?.settings.arguments;
     final listfromgroceryshop = itemlist.firstWhere(
-      (element) => element['id'] == itemid,
+      (element) => element['id'] == iterateditemId,
     );
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(children: [
         Stack(children: [
           Image.network(listfromgroceryshop['image'],
-              width: double.infinity, height: 400, fit: BoxFit.cover),
+               height: 400, fit: BoxFit.cover),
           Positioned(
             bottom: 70,
             left: 20,
@@ -55,7 +53,7 @@ class _ProductPageState extends State<ProductPage> {
           Positioned(
             bottom: 36,
             left: 40,
-            child: Text("8.4/85 reviews",
+            child: Text(listfromgroceryshop['rating'],
                 style: TextStyle(fontSize: 15, color: Colors.white)),
           ),
           Positioned(
@@ -101,13 +99,6 @@ class _ProductPageState extends State<ProductPage> {
                           Icons.location_on,
                           color: Colors.grey,
                         ),
-                        Text(
-                          listfromgroceryshop['location'],
-                          style: const TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        )
                       ]),
                     ),
                     const Padding(
