@@ -4,21 +4,7 @@ import 'package:mtc_store/product_page.dart';
 
 class BestSelling extends StatelessWidget {
   BestSelling({super.key});
-
-  // var bestsellingimages = [
-  //   "./assets/rice.png",
-  //   "./assets/sugar.png",
-  //   "./assets/jaggery.png",
-  //   "./assets/chillies.png",
-  // ];
-
-  // var bestsellingnames = [
-  //   'Rice',
-  //   'Sugar',
-  //   'Jaggery',
-  //   'Chillies',
-  // ];
-
+  
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
