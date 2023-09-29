@@ -1,22 +1,7 @@
-<h1 align="center">
-<img src="" height="200px" alt="Mtc Grcoery App"/>
-<br>
-Mtc Grocery App
-</h1>
-
-A Grocery app ui in flutter (work in progress).
-
-A working mobile app
-
-## Platforms
-
-- Mobile
-
-
-## Screenshots
-
-- ### Mobile
-
-  <p>
-  <img src ="">
-  </p>
+![Screenshot (715)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/9524ff13-6966-4775-95fc-b6b41c431bfa)
+![Screenshot (716)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/a92b60e2-a3e2-4b82-a607-17ba364cd270)
+![Screenshot (717)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/4a1f91e8-c85e-4f43-bf2f-e49d3562acc8)
+![Screenshot (718)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/2b2f9d54-66b6-488a-b0dc-11cf0a9ee083)
+![Screenshot (712)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/441210fb-654a-40f4-82fd-ea0b773a71cc)
+![Screenshot (713)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/6bc0ffed-d909-4ff7-9132-4bb486a08fc1)
+![Screenshot (714)](https://github.com/N-Mohammed-Swalih/Mtc_Grocery_Store/assets/137269292/c0e992e1-40e9-405d-a802-0648fb5f829d)
